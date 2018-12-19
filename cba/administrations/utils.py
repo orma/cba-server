@@ -20,13 +20,15 @@ def import_admin_unit(json_file):
         serializer = AdminUnitSerializer(data=province)
         
         if not serializer.is_valid():
-            raise InvalidProvinceData(data=province)
+            raise InvalidProvinceData(
+                data=province, message=serializer.errors)
 
         pro_instance = serializer.save()
 
         for district in districts:
             serializer = AdminUnitSerializer(data=district)
             if not serializer.is_valid():
-                raise InvalidDistrictData(data=district)
+                raise InvalidDistrictData(
+                    data=district, message=serializer.errors)
             
             serializer.save()
