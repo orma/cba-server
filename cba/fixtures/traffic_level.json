@@ -1,0 +1,31 @@
+[{
+    "model": "roads.trafficlevel",
+    "pk": 1,
+    "fields": {
+        "name": "Very Low"
+    }
+}, {
+    "model": "roads.trafficlevel",
+    "pk": 2,
+    "fields": {
+        "name": "Low"
+    }
+}, {
+    "model": "roads.trafficlevel",
+    "pk": 3,
+    "fields": {
+        "name": "Medium"
+    }
+}, {
+    "model": "roads.trafficlevel",
+    "pk": 4,
+    "fields": {
+        "name": "High"
+    }
+}, {
+    "model": "roads.trafficlevel",
+    "pk": 5,
+    "fields": {
+        "name": "Very High"
+    }
+}]

@@ -1,0 +1,31 @@
+[{
+    "model": "roads.pavementconditionclass",
+    "pk": 1,
+    "fields": {
+        "name": "Very Good"
+    }
+}, {
+    "model": "roads.pavementconditionclass",
+    "pk": 2,
+    "fields": {
+        "name": "Good"
+    }
+}, {
+    "model": "roads.pavementconditionclass",
+    "pk": 3,
+    "fields": {
+        "name": "Fair"
+    }
+}, {
+    "model": "roads.pavementconditionclass",
+    "pk": 4,
+    "fields": {
+        "name": "Poor"
+    }
+}, {
+    "model": "roads.pavementconditionclass",
+    "pk": 5,
+    "fields": {
+        "name": "Very Poor"
+    }
+}]
