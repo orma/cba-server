@@ -11,6 +11,7 @@ numpy = "*"
 django-environ = "*"
 "psycopg2" = "*"
 django-filter = "*"
+django-extensions = "*"
 
 [dev-packages]
 django-extensions = "*"
