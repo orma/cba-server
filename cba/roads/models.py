@@ -12,7 +12,8 @@ class Section(TimeStampedModel):
         _('vpromm id'), blank=True, null=True, max_length=20)
     section_id = models.CharField(
         _('section id'), max_length=30, null=False, primary_key=True)
-    road_number = models.SmallIntegerField(_('road number'), null=False)
+    road_number = models.CharField(
+        _('road number'), max_length=10, null=True, blank=True)
     road_name = models.CharField(_('road name'), max_length=255, blank=False)
     road_start = models.CharField(
         _('road start'), max_length=255, blank=False, null=True)

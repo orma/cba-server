@@ -12,6 +12,7 @@ django-environ = "*"
 "psycopg2" = "*"
 django-filter = "*"
 django-extensions = "*"
+tqdm = "*"
 
 [dev-packages]
 django-extensions = "*"
