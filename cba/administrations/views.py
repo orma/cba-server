@@ -17,7 +17,10 @@ class ProvinceDetailView(generics.RetrieveAPIView):
 
     def get_queryset(self):
         try:
-            return AdminUnit.objects.filter(pk=self.kwargs.get('pk'))
+            return AdminUnit.objects.filter(
+                pk=self.kwargs.get('pk'),
+                type='province'
+            )
         except AdminUnit.DoesNotExist:
             return None
 

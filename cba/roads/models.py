@@ -70,4 +70,4 @@ class Section(TimeStampedModel):
         verbose_name_plural = _('sections')
 
     def __str__(self):
-        return self.road_section_id
+        return self.section_id
