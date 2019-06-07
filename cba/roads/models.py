@@ -45,9 +45,24 @@ class Section(TimeStampedModel):
     surface_type = models.SmallIntegerField(_('surface type'), null=True, blank=True)
     condition_class = models.SmallIntegerField(_('pavement condition class'), null=True, blank=True)
     roughness = models.FloatField(_('roughness (IRI)'), null=True, blank=True)
-
     traffic_level = models.SmallIntegerField(_('traffic level'), null=True, blank=True)
     traffic_growth = models.SmallIntegerField(_('traffic annual growth scenario'), null=True, blank=True)
+    structural_no = models.FloatField(_('structural number'), null=True, blank=True)
+    pavement_age = models.SmallIntegerField(_('pavement age'), null=True, blank=True)
+
+    aadt_motorcyle = models.FloatField(_('aadt_motorcyle'), null=True, blank=True)
+    aadt_carsmall = models.FloatField(_('aadt_carsmall'), null=True, blank=True)
+    aadt_carmedium = models.FloatField(_('aadt_carmedium'), null=True, blank=True)
+    aadt_delivery = models.FloatField(_('aadt_delivery'), null=True, blank=True)
+    aadt_4wheel = models.FloatField(_('aadt_4wheel'), null=True, blank=True)
+    aadt_smalltruck = models.FloatField(_('aadt_smalltruck'), null=True, blank=True)
+    aadt_mediumtruck = models.FloatField(_('aadt_mediumtruck'), null=True, blank=True)
+    aadt_largetruck = models.FloatField(_('aadt_largetruck'), null=True, blank=True)
+    aadt_articulatedtruck = models.FloatField(_('aadt_articulatedtruck'), null=True, blank=True)
+    aadt_smallbus = models.FloatField(_('aadt_smallbus'), null=True, blank=True)
+    aadt_mediumbus = models.FloatField(_('aadt_mediumbus'), null=True, blank=True)
+    aadt_largebus = models.FloatField(_('aadt_largebus'), null=True, blank=True)
+    aadt_total = models.FloatField(_('aadt_total'), null=True, blank=True)
 
     class Meta:
         ordering = ('section_id',)

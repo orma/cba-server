@@ -128,3 +128,48 @@ class SectionCSVAdapter(object):
 
     def _make_traffic_growth(self):
         return self.makeIntField('traffic_growth')
+
+    def _make_pavement_age(self):
+        return self.makeIntField('pavement_age')
+
+    def _make_structural_no(self):
+        return self.makeFloatField('structural_no')
+
+    def _make_aadt_motorcyle(self):
+        return self.makeFloatField('aadt_motorcyle')
+
+    def _make_aadt_carsmall(self):
+        return self.makeFloatField('aadt_carsmall')
+
+    def _make_aadt_carmedium(self):
+        return self.makeFloatField('aadt_carmedium')
+
+    def _make_aadt_delivery(self):
+        return self.makeFloatField('aadt_delivery')
+
+    def _make_aadt_4wheel(self):
+        return self.makeFloatField('aadt_4wheel')
+
+    def _make_aadt_smalltruck(self):
+        return self.makeFloatField('aadt_smalltruck')
+
+    def _make_aadt_mediumtruck(self):
+        return self.makeFloatField('aadt_mediumtruck')
+
+    def _make_aadt_largetruck(self):
+        return self.makeFloatField('aadt_largetruck')
+
+    def _make_aadt_articulatedtruck(self):
+        return self.makeFloatField('aadt_articulatedtruck')
+
+    def _make_aadt_smallbus(self):
+        return self.makeFloatField('aadt_smallbus')
+
+    def _make_aadt_mediumbus(self):
+        return self.makeFloatField('aadt_mediumbus')
+
+    def _make_aadt_largebus(self):
+        return self.makeFloatField('aadt_largebus')
+
+    def _make_aadt_total(self):
+        return self.makeFloatField('aadt_total')
