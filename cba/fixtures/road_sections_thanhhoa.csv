@@ -1,4 +1,4 @@
-﻿section_id,road_number,road_name,road_start,road_end,section_order,province,district,commune,management,start_km,end_km,length,lanes,width,road_class,terrain,temperature,moisture,road_type,surface_type,condition_class,roughness,traffic_level,traffic_growth
+section_id,road_number,road_name,road_start,road_end,section_order,province,district,commune,management,start_km,end_km,length,lanes,width,road_class,terrain,temperature,moisture,road_type,surface_type,condition_class,roughness,traffic_level,traffic_growth
 212TH00023-01,516,Kim Tân - Thạch Định - Thạch Quảng,"Thị trấn Kim Tân, huyện Thạch Thành","Xã Thạch Quảng, huyện Thạch Thành",1,Thanh Hoa,TT,,2,0.00,4.00,4.00,,3.5,6,3,1,4,,3,4,,6,4
 212TH00032-01,519B,TT Sao Vàng - Bình Sơn - Luận Thành - Bù Đồn,"Xã Luận Thành, huyện Thường Xuân","TT Sao Vàng, huyện Thường Xuân",1,Thanh Hoa,TN,,2,0.00,10.00,10.00,,3.5,6,3,1,4,,3,4,,6,4
 213CT00002-01,213,QL217-Phang Khanh,QL217 (Cam Thanh),"Xã Điền Trung, Bá Thước",1,Thanh Hoa,CT,,3,0.00,11.26,10.26,,3.5,6,3,1,4,,3,4,,6,4
