@@ -26,6 +26,11 @@ class CBAResult(models.Model):
         _('npv per road work cost'), null=True, blank=True
     )
     eirr = models.FloatField(_('eirr'), null=True, blank=True)
+    truck_percent = models.FloatField(_('truck percent'), null=True, blank=True)
+    vehicle_utilization = models.FloatField(
+        _('vehicle utilization'), null=True, blank=True
+    )
+    esa_loading = models.FloatField(_('esa loading'), null=True, blank=True)
 
     # Total traffic vehicle per day (in 10 years)
     aadt = ArrayField(

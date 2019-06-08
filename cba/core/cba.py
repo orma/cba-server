@@ -129,7 +129,7 @@ class CostBenefitAnalysisModel:
         ####################################################
         # Loop alternatives
         ####################################################
-        iTheSelected = 0
+        iTheSelected = 1
         dNPVMax = 0.0
 
         for ia in range(iNoAlernatives):
@@ -201,32 +201,32 @@ class CostBenefitAnalysisModel:
                     dSolCost[ia] = dCostCapitalFin[ia, iy]
                     dSolCostkm[ia] = dSolCost[ia] / dCondLength[ia, iy]
 
-                    # repair road work
-                    if (iy == iTheRepairY1 - 1) or (iy == iTheRepairY2 - 1) or (iy == iTheRepairY3 - 1) or (iy == iTheRepairY4 - 1):
-                        sRoadCode[ia, iy] =self.dRoadWorks[iTheRepair - 1, 1]
-                        if self.dRoadWorks[iTheRepair - 1, 7] is not None and self.dRoadWorks[iTheRepair - 1, 7] > 0:
-                            iCondLanes[ia, iy] =self.dRoadWorks[iTheRepair - 1, 7]
-                            dCondWidth[ia, iy] =self.dRoadWorks[iTheRepair - 1, 8]
-                            iCondSurface[ia, iy] =self.dRoadWorks[iTheRepair - 1, 9]
-                            iYearLanes =self.dRoadWorks[iTheRepair, 7]
-                            dYearWidth =self.dRoadWorks[iTheRepair, 8]
-                            iYearSurface =self.dRoadWorks[iTheRepair, 9]
+                # repair road work
+                if (iy == iTheRepairY1 - 1) or (iy == iTheRepairY2 - 1) or (iy == iTheRepairY3 - 1) or (iy == iTheRepairY4 - 1):
+                    sRoadCode[ia, iy] =self.dRoadWorks[iTheRepair - 1, 1]
+                    if self.dRoadWorks[iTheRepair - 1, 7] is not None and self.dRoadWorks[iTheRepair - 1, 7] > 0:
+                        iCondLanes[ia, iy] =self.dRoadWorks[iTheRepair - 1, 7]
+                        dCondWidth[ia, iy] =self.dRoadWorks[iTheRepair - 1, 8]
+                        iCondSurface[ia, iy] =self.dRoadWorks[iTheRepair - 1, 9]
+                        iYearLanes =self.dRoadWorks[iTheRepair, 7]
+                        dYearWidth =self.dRoadWorks[iTheRepair, 8]
+                        iYearSurface =self.dRoadWorks[iTheRepair, 9]
 
-                        # structural number
-                        if self.dRoadWorks[iTheRepair - 1, 12] is not None and self.dRoadWorks[iTheRepair - 1, 12] > 0:
-                            dCondSNC[ia, iy] =self.dRoadWorks[iTheRepair - 1, 12]
-                            dYearSNC =self.dRoadWorks[iTheRepair - 1, 12]
+                    # structural number
+                    if self.dRoadWorks[iTheRepair - 1, 12] is not None and self.dRoadWorks[iTheRepair - 1, 12] > 0:
+                        dCondSNC[ia, iy] =self.dRoadWorks[iTheRepair - 1, 12]
+                        dYearSNC =self.dRoadWorks[iTheRepair - 1, 12]
 
-                        # repair work costs
-                        if iTerrain == 1:
-                            dCostRepairFin[ia, iy] =self.dRoadWorks[iTheRepair-1, 3] * dCondLength[ia, iy] * dCondWidth[ia, iy] / 1000.0
-                            dCostRepairEco[ia, iy] =self.dRoadWorks[iTheRepair-1, 3] * dCondLength[ia, iy] * dCondWidth[ia, iy] * self.dEconomic_Factor / 1000.0
-                        elif iTerrain == 2:
-                            dCostRepairFin[ia, iy] =self.dRoadWorks[iTheRepair-1, 4] * dCondLength[ia, iy] * dCondWidth[ia, iy] / 1000.0
-                            dCostRepairEco[ia, iy] =self.dRoadWorks[iTheRepair-1, 4] * dCondLength[ia, iy] * dCondWidth[ia, iy] * self.dEconomic_Factor / 1000.0
-                        elif iTerrain == 3:
-                            dCostRepairFin[ia, iy] =self.dRoadWorks[iTheRepair-1, 5] * dCondLength[ia, iy] * dCondWidth[ia, iy] / 1000.0
-                            dCostRepairEco[ia, iy] =self.dRoadWorks[iTheRepair-1, 5] * dCondLength[ia, iy] * dCondWidth[ia, iy] * self.dEconomic_Factor / 1000.0
+                    # repair work costs
+                    if iTerrain == 1:
+                        dCostRepairFin[ia, iy] =self.dRoadWorks[iTheRepair-1, 3] * dCondLength[ia, iy] * dCondWidth[ia, iy] / 1000.0
+                        dCostRepairEco[ia, iy] =self.dRoadWorks[iTheRepair-1, 3] * dCondLength[ia, iy] * dCondWidth[ia, iy] * self.dEconomic_Factor / 1000.0
+                    elif iTerrain == 2:
+                        dCostRepairFin[ia, iy] =self.dRoadWorks[iTheRepair-1, 4] * dCondLength[ia, iy] * dCondWidth[ia, iy] / 1000.0
+                        dCostRepairEco[ia, iy] =self.dRoadWorks[iTheRepair-1, 4] * dCondLength[ia, iy] * dCondWidth[ia, iy] * self.dEconomic_Factor / 1000.0
+                    elif iTerrain == 3:
+                        dCostRepairFin[ia, iy] =self.dRoadWorks[iTheRepair-1, 5] * dCondLength[ia, iy] * dCondWidth[ia, iy] / 1000.0
+                        dCostRepairEco[ia, iy] =self.dRoadWorks[iTheRepair-1, 5] * dCondLength[ia, iy] * dCondWidth[ia, iy] * self.dEconomic_Factor / 1000.0
         
                 # recurrent road work without recurrent maintenance condition multipliers
                 dCostRecurrentFin[ia, iy] = self.dRecurrent[iCondSurface[ia, iy]-1, iCondLanes[ia, iy]-1] * dCondLength[ia, iy] / 1000000.0
@@ -342,7 +342,7 @@ class CostBenefitAnalysisModel:
                 for iv in range(12): # 12 types of vehicles
                     if self.dVOC[iCondLanes[ia, iy] - 1, iTerrain - 1, 0, iv] != float(0):
                         dCostVOC[ia, iy] = dCostVOC[ia, iy] + (
-                            self.dVOC[iCondLanes[ia, iy]-1, iTerrain-1, 0, iv] + \
+                             self.dVOC[iCondLanes[ia, iy]-1, iTerrain-1, 0, iv] + \
                             (self.dVOC[iCondLanes[ia, iy]-1, iTerrain-1, 1, iv] * dCondIRI[ia, iy]) + \
                             (self.dVOC[iCondLanes[ia, iy]-1, iTerrain-1, 2, iv] * np.power(dCondIRI[ia, iy], 2)) + \
                             (self.dVOC[iCondLanes[ia, iy]-1, iTerrain-1, 3, iv] * np.power(dCondIRI[ia, iy], 3))
