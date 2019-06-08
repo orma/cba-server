@@ -13,6 +13,7 @@ django-environ = "*"
 django-filter = "*"
 django-extensions = "*"
 tqdm = "*"
+pandas = "*"
 
 [dev-packages]
 django-extensions = "*"
