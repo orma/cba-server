@@ -1,0 +1,43 @@
+[{
+    "model": "roads.surfacetype",
+    "pk": 1,
+    "fields": {
+        "name": "Cement Concrete"
+    }
+}, {
+    "model": "roads.surfacetype",
+    "pk": 2,
+    "fields": {
+        "name": "Asphalt Concrete"
+    }
+}, {
+    "model": "roads.surfacetype",
+    "pk": 3,
+    "fields": {
+        "name": "Surface Treatment"
+    }
+}, {
+    "model": "roads.surfacetype",
+    "pk": 4,
+    "fields": {
+        "name": "Gravel"
+    }
+}, {
+    "model": "roads.surfacetype",
+    "pk": 5,
+    "fields": {
+        "name": "Earth"
+    }
+}, {
+    "model": "roads.surfacetype",
+    "pk": 6,
+    "fields": {
+        "name": "Macadam"
+    }
+}, {
+    "model": "roads.surfacetype",
+    "pk": 7,
+    "fields": {
+        "name": "Cobblestone"
+    }
+}]

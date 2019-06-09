@@ -10,11 +10,16 @@ django-model-utils = "*"
 numpy = "*"
 django-environ = "*"
 "psycopg2" = "*"
+django-filter = "*"
+django-extensions = "*"
+tqdm = "*"
+pandas = "*"
 
 [dev-packages]
 django-extensions = "*"
 mixer = "*"
 faker = "*"
+ipython = "*"
 
 [requires]
 python_version = "3.6"

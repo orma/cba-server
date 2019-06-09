@@ -1,6 +1,8 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
+from .managers import AdminUnitManager
+
 
 class AdminUnit(models.Model):
     id = models.IntegerField(_('id'), null=False, blank=False, primary_key=True)
@@ -12,6 +14,7 @@ class AdminUnit(models.Model):
     total = models.FloatField(_('total'), null=True, blank=True)
     vpromm = models.FloatField(_('vpromm'), null=True, blank=True)
 
+    objects = AdminUnitManager()
     class Meta:
         verbose_name = _('administrative unit')
         verbose_name_plural = _('administrative units')
