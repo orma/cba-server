@@ -3,6 +3,8 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.postgres.fields import ArrayField
 
+from .managers import CBAResultManager
+
 
 class CBAResult(models.Model):
     id = models.UUIDField(_('id'), primary_key=True, default=uuid.uuid4, editable=False)
@@ -70,6 +72,8 @@ class CBAResult(models.Model):
     section = models.ForeignKey(
         'roads.Section', on_delete=models.CASCADE, related_name='cba_results'
     )
+
+    objects = CBAResultManager()
 
     class Meta:
         verbose_name = _('cost benefit analysis result')
